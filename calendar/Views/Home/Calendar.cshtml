@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Calendar";
+}
+
+@section Styles{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+}
+
+<div id="secList" class="section">
+
+        <div>
+            <button id="btnShowDetails">
+                <i id="iconEye" class="fas fa-eye"></i><i id= "iconSlash" class="fas fa-eye-slash"></i>
+                Show details
+            </button>
+        </div>
+
+        <div id="pendingTasks">
+
+        </div>  
+</div>
+    
+    <div id="secForm" class="section">
+        <h3>New Task</h3>
+        <input id="txtTitle" type="text" class="control" placeholder="Task title">
+
+        <div id="alertError" class="alert alert-danger">
+            Error: Please verify the title.
+        </div>
+
+        <label id="impLabel" class="control">Important?<i id="iconImp" class="far fa-star"></i></label>
+        
+        <input id="txtDate" type="datetime-local" class="control" placeholder="Date">
+
+        <div id="alertError2" class="alert alert-danger">
+            Error: Please enter the date. 
+        </div>
+
+        <textarea id="txtDescription" class="control" placeholder="Task description"></textarea>
+
+        <input id="txtLocation" type="text" class="control" placeholder="Location">
+
+        <button id="btnSave" class="btn btn-info">Save Task <i class="fas fa-save"></i></button>
+        
+    </div>
+
+@section Scripts{
+    <script src="/js/task.js"></script>
+    <script src="/js/app.js"></script> 
+}
